@@ -10,15 +10,17 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.projectlombok:lombok:1.18.28'
-    implementation 'com.codeborne:selenide:6.17.2'
-    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
-    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.30'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+    testImplementation 'com.codeborne:selenide:6.17.2'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.0'
     testImplementation 'mysql:mysql-connector-java:8.0.30'
-    implementation 'commons-dbutils:commons-dbutils:1.7'
-    implementation 'com.github.javafaker:javafaker:1.0.2'
-    testImplementation 'org.apache.commons:commons-dbutils:1.7'
+    testImplementation 'commons-dbutils:commons-dbutils:1.7'
+    testImplementation 'com.github.javafaker:javafaker:1.0.2'
+    implementation group: 'commons-dbutils', name: 'commons-dbutils', version: '1.7'
 }
 
 test {
